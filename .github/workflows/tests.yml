@@ -44,3 +44,4 @@ jobs:
       - run: cd server
       - run: pnpm install --frozen-lockfile
       - run: pnpm run test
+      
