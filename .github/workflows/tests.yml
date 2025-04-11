@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: server
+        working-directory: ./server/
 
     services:
       postgres:
@@ -43,6 +43,7 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
+          cache-dependency-path: './server/pnpm-lock.yaml'
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run test
